@@ -1,0 +1,706 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+button,
+div,
+label,
+input,
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --color: #7b1fa2;
+  --bg-color: #efeef3;
+  --bg-secondery: #efeef330;
+}
+
+.btn-custom {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 13px 35px;
+  border-radius: 25px;
+  background-color: var(--color);
+  color: #fff;
+  border: 2px solid var(--color);
+  letter-spacing: 1px;
+  box-shadow: 0px 3px 18px 2px #a9a8a8;
+  transition: .3s;
+
+}
+
+.btn-custom:hover {
+  background-color: transparent;
+  color: black;
+  border-color: black;
+  font-size: 13px;
+  box-shadow: 0px 6px 12px 4px #00000040;
+}
+
+/*______---
+---------common css End----
+____________--------*/
+
+/*______---
+---------Header css ----
+____________--------*/
+header {
+  position: sticky;
+  top: 0;
+  background: #fff !important;
+  box-shadow: 0 2px 40px hsl(0deg 0% 6% / 5%);
+  z-index: 1000;
+}
+
+.navbar-brand {
+  width: 14%;
+}
+
+.nav-link {
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
+}
+
+.nav-link:hover {
+  color: var(--color);
+}
+
+.nav-link.active {
+  color: var(--color) !important;
+  font-weight: 700;
+}
+
+.navbar-toggler:focus {
+  outline: none !important;
+}
+
+/*______---
+---------Header css End----
+____________--------*/
+
+
+/*______---
+---------Hero section css ----
+____________--------*/
+.banner {
+  background: var(--bg-color);
+  width: auto;
+  padding-top: 41px;
+}
+
+.banner h1 {
+  font-size: 52px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: black;
+  padding: 10px 0;
+}
+
+.banner-img-first {
+  width: 495px;
+}
+
+.banner-img-second {
+  width: 547px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: var(--color);
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: -5%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+
+/* The dots/bullets/indicators */
+.dot-container {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+}
+
+.dot {
+  position: relative;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: var(--color);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.activ,
+.dot:hover {
+  background-color: black;
+}
+
+/* Fading animation */
+.fadd {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*______---
+---------Hero section css End----
+____________--------*/
+
+/*______---
+---------About section css----
+____________--------*/
+.about-section {
+  background-image: linear-gradient(-90deg, var(--bg-secondery) 50%, var(--bg-color) 50%) !important;
+  padding: 120px 0;
+}
+
+.title h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 44px;
+  color: black;
+}
+
+.make-icon span::after {
+  /* width: 70px;
+  height: 70px; */
+  content: '';
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #7b1fa250;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  animation: widthAnim 1s infinite alternate-reverse;
+  z-index: -1;
+}
+
+@keyframes widthAnim {
+  from {
+    width: 45px;
+    height: 45px;
+  }
+
+  to {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+
+
+.make-icon span {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: var(--color);
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  padding-top: 6px;
+}
+
+.about-content h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+
+.about-content p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #858585;
+  margin-top: 20px;
+  line-height: 25px;
+}
+
+/*______---
+---------About section css End----
+____________--------*/
+/*______---
+---------Features section css ----
+____________--------*/
+.features-section {
+  padding: 150px 0;
+  background-image: linear-gradient(180deg, var(--bg-secondery) 50%, var(--bg-color) 50%) !important;
+  background-size: cover;
+}
+
+.card {
+  background-color: #fff;
+}
+
+.card-title {
+  font-weight: 600;
+  color: black;
+}
+
+.galan-section {
+  padding: 0px 0;
+  background-image: linear-gradient(-90deg, var(--bg-color) 50%, var(--bg-secondery) 50%) !important;
+}
+
+.owl-dot-container {
+  position: absolute;
+  bottom: -80px;
+  left: 41%;
+}
+
+.owl-dot-container .owl-dot {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  background: black;
+  border-radius: 50%;
+  margin: 0px 7px;
+  position: relative;
+  cursor: pointer;
+}
+
+.product-img .p-img:nth-child(1) {
+  display: block;
+}
+
+.product-img .p-img {
+  display: none;
+  width: 80%;
+  margin: auto;
+}
+
+.owl-dot-container .owl-dot.acti::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-color: var(--color);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.owl-dot-container .owl-dot:nth-child(2) {
+  background-color: #319ac3;
+}
+
+.owl-dot-container .owl-dot:nth-child(3) {
+  background-color: #fff;
+}
+
+.fa {
+  font-size: 54px;
+  color: var(--color);
+  padding: 10px;
+  margin: 10px 0;
+  text-shadow: 0px 0px 24px #c5c3c370;
+}
+
+/*______---
+---------Features section css End----
+____________--------*/
+
+/*______---
+---------Tastimonial section css ----
+____________--------*/
+.tastimonial {
+  padding: 200px 0 150px 0;
+  background-image: linear-gradient(180deg, var(--bg-color) 50%, var(--bg-secondery) 50%) !important;
+}
+
+.tastimonial-slider {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tastimonial-slider .tastimonial-slid-item {
+  width: 45%;
+}
+
+.tastimonial-slid-item .comment-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 25px 40px rgb(0 0 0 / 20%);
+  position: relative;
+}
+
+.tastimonial-slid-item .comment-box::before {
+  content: '';
+  bottom: -20px;
+  top: auto;
+  border-color: #fff transparent transparent #fff;
+  display: block;
+  position: absolute;
+  left: 0;
+  margin-left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px;
+}
+
+.tastimonial-slid-item .comment-box p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #333;
+}
+
+.tastimonial-slid-item .user-details .user-pic img {
+  width: 55px;
+  height: 55px;
+  border-radius: 25%;
+}
+
+.tastimonial-slid-item .user-details .user-name h4 {
+  font-size: 22px;
+  font-weight: 600;
+  color: black;
+}
+
+.tastimonial-slid-item .user-details .user-name p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f1e1e;
+}
+
+.plusDivs1,
+.plusDivs2 {
+  font-size: 25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid #918d8d;
+  transition: .3s;
+}
+
+.plusDivs1:hover {
+  border-color: #000;
+  transform: translateX(-5px);
+}
+
+.plusDivs2:hover {
+  border-color: #000;
+  transform: translateX(5px);
+}
+
+.tastiSlides {
+  animation: fadee;
+  animation-duration: 1s;
+}
+
+
+
+@keyframes fadee {
+  from {
+    opacity: .4;
+    transform: translateX(150px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/*______---
+---------Tastimonial section css End----
+____________--------*/
+
+/*______---
+---------tranding section css ----
+____________--------*/
+.tranding {
+  padding: 50px 0 150px 0;
+  background: linear-gradient(-90deg, var(--bg-secondery) 50%, var(--bg-color) 50%);
+}
+
+.trand-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.trand-content-item {
+  width: 31%;
+  border: 2px solid var(--color);
+  background: #fff;
+  color: #000;
+  box-shadow: 0 25px 98px rgb(0 0 0 / 30%);
+
+}
+
+.trand-content-item img {
+  width: 100%;
+  cursor: pointer;
+  border-bottom: 2px solid var(--color);
+  transition: .4s;
+}
+
+.content-details h4 {
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.content-details h4:hover {
+  color: var(--color);
+}
+
+/*______---
+---------tranding section css End----
+____________--------*/
+
+/*______---
+---------subscribe section css ----
+____________--------*/
+.subscribe {
+  padding: 150px 0;
+  background: linear-gradient(180deg, var(--bg-secondery) 50%, var(--bg-color) 50%);
+}
+
+.type-flied {
+  border: 2px solid var(--color);
+  padding: 13px 17px;
+  font-size: 14px;
+  width: 67%;
+  border-radius: 25px 0 0 25px;
+  font-weight: 600;
+  outline: none;
+  box-shadow: 0px 5px 15px #8f8f8f50;
+}
+
+.btn-submit {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 13px 35px;
+  border-radius: 0px 25px 25px 0;
+  margin-left: -5px;
+  background-color: var(--color);
+  color: #fff;
+  border: 2px solid var(--color);
+  letter-spacing: 1px;
+  transition: .3s;
+  border-left: 0;
+  box-shadow: 0px 5px 15px #8f8f8f50;
+  width: 33%;
+}
+
+.btn-submit:hover {
+  background-color: transparent;
+  color: black;
+}
+
+/*______---
+---------subscribe section css End----
+____________--------*/
+
+/*______---
+---------Footer section css ----
+____________--------*/
+footer {
+  background: #001018;
+  color: #fff;
+}
+
+.link-item,
+.social-item {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.social-links {
+  text-align: right;
+}
+
+.social-item a {
+  font-size: 20px;
+  color: #fff;
+}
+
+.link-item a {
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+}
+
+.link-item a::after {
+  content: '';
+  width: 0;
+  margin: auto;
+  height: 3px;
+  background-color: var(--color);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: .3s;
+  text-align: center;
+}
+
+.link-item a:hover {
+  color: var(--color);
+}
+
+.social-item a:hover {
+  color: var(--color);
+}
+
+.link-item a:hover::after {
+  width: 100%;
+}
+
+/*______---
+---------Footer section css End----
+____________--------*/
+
+
+/*______---
+---------Responsive css----
+____________--------*/
+
+@media (max-width:991px) {
+
+  .banner-img-first,
+  .banner-img-second {
+    width: 100%;
+  }
+
+  .banner h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width:767px) {
+  .navbar-brand {
+    width: 18%;
+  }
+
+  .banner h1 {
+    font-size: 28px;
+  }
+
+  .banner-img-first {
+    width: 85%;
+  }
+
+  .prev,
+  .next {
+    display: none;
+  }
+
+  .dot-container {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .product-img {
+    margin-top: 60px;
+  }
+
+  .trand-content {
+    justify-content: center;
+  }
+
+  .trand-content-item {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .subscribe form {
+    margin-top: 10px;
+  }
+
+  .sm-mb {
+    margin-bottom: 30px;
+  }
+
+  .social-links,
+  .links-item {
+    text-align: center;
+  }
+}
