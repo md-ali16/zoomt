@@ -656,6 +656,7 @@ ____________--------*/
 }
 
 @media (max-width:767px) {
+
   .navbar-brand {
     width: 18%;
   }
@@ -702,5 +703,30 @@ ____________--------*/
   .social-links,
   .links-item {
     text-align: center;
+  }
+}
+
+@media (max-width:434px) {
+  .banner h1 {
+    font-size: 20px;
+  }
+
+  .title h1 {
+    font-size: 25px;
+    line-height: 26px;
+  }
+
+  .type-flied {
+    font-size: 12px;
+    padding: 13px 15px;
+  }
+
+  .btn-submit {
+    font-size: 12px;
+    padding: 13px 15px;
+  }
+
+  .link-item a {
+    font-size: 11px;
   }
 }
